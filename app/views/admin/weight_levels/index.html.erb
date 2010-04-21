@@ -1,0 +1,20 @@
+<%= button_link_to "New Weight Level", new_object_url, :icon => 'add' %>
+
+<h1>Weight Levels</h1>
+<table class="index">
+  <thead>
+    <th>Weight Level</th>
+    <th>Cost</th>
+    <th></th>
+  </thead>
+  <% @weight_levels.sort_by { |wl| wl.max }.each do |weight_level| -%>
+  <tr id="<%= dom_id weight_level %>">
+    <td><%= weight_level.max.to_s %></td>
+    <td><%= weight_level.cost.to_s %></td>
+    <td class="actions">
+      <%= link_to_edit weight_level %>
+      <%= link_to_delete weight_level %>
+    </td>
+  </tr>
+  <% end -%>
+</table>

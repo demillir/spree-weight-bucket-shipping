@@ -1,0 +1,8 @@
+<h1>New Weight Level</h1>
+ 
+<%= error_messages_for :weight_level %>
+
+<% form_for(:weight_level, :url => collection_path) do |f| -%>
+  <%= render :partial => "form", :locals => { :f => f } %>
+  <%= f.submit "Create Weight Level" %>
+<% end -%>

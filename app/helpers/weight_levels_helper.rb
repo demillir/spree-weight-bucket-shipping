@@ -1,0 +1,2 @@
+module WeightLevelsHelper
+end
