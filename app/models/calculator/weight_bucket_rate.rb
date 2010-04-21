@@ -21,6 +21,5 @@ class Calculator::WeightBucketRate < Calculator
 
   def available?(order)
     true
-    # not available for orders over 1 lb
   end
 end
